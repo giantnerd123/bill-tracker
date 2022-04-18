@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Spotify",
+        "price": 5.99,
+        "repeating": true,
+        "frequency": "Monthly",
+        "lastPayment": "2022-03-21",
+        "dueDate": "2022-04-21",
+        "paymentURL": "https://www.spotify.com/us/"
+    },
+
+    {
+        "name": "Jet Ski Rental",
+        "price": 48.22,
+        "repeating": false,
+        "frequency": "One-Time",
+        "dueDate": "2022-05-07",
+        "paymentURL": "http://wcjetskirentals.com/"
+    }
+]
