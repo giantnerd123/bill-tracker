@@ -7,10 +7,21 @@
     <title>Bills Homepage</title>
 </head>
 <body>
+    <div>
+        <a class="button add font" href="/new">Add</a>
+    </div>
     <h1>All Bills</h1>
     <div>
         <% bills.forEach(bill => { console.log(bill.name)%>
             <div><%= bill.name %></div>
+            <div>
+                <a href="/<%=bill._id%>/edit">Edit</a>
+                <form action="/<%=bill.id%>?_method=Delete" method="POST">
+                    <input type="submit"
+                    value="Delete" />
+                </form>
+                <!-- <a class="font" href="/">Delete</a> -->
+            </div>
        <% }) %>
     </div>
 </body>
