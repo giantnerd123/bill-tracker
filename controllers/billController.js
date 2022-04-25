@@ -22,7 +22,7 @@ router.delete('/:id', (req,res)=>{
     Bill.findOneAndRemove({_id: req.params.id}).then(res.redirect('/'))
 });
 
-router.get('/:id/edit', (req,res)=>{
+router.get('/:id', (req,res)=>{
     const id = req.params.id;
     Bill.findById(id)
       .then((bill)=>{
@@ -31,8 +31,8 @@ router.get('/:id/edit', (req,res)=>{
       .catch(console.error)
   });
 
-router.put('/edit', (req,res)=>{
-    Bill.findOneAndUpdate({_id: req.params.id}, req.body).then(bills=>res.send(bills))
+router.put('/:id', (req,res)=>{
+    Bill.findOneAndUpdate({_id: req.params.id}, req.body).then(bills=>res.redirect('/'))
 });
 
 
