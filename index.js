@@ -5,6 +5,7 @@ const ejs = require('ejs');
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use('/public', express.static('public'));
 
 //changing to connection.js for routes
 const billController = require('./controllers/billController.js');
