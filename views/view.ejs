@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" href="https://drvic10k.github.io/bootstrap-sortable/Contents/bootstrap-sortable.css" />
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.js"></script>
+
+        <script src="https://drvic10k.github.io/bootstrap-sortable/Scripts/bootstrap-sortable.js"></script>
+
+<title>View <%=bill.name%></title>
+
+</head>
+
+<body>
+    <h1 class="bg-dark text-white p-4 mt-4 container rounded"><%=bill.name%></h1>
+    <div class="m-5 rounded bg-light">
+        <table class="table table-bordered table-striped table-hover" id="myTable">
+            <thead class="bg-dark text-white rounded" style="cursor:pointer">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Repeating</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">Last Payment</th>
+                <th scope="col">Next Due Date</th>
+                <th scope="col">Payment URL</th>
+                <th scope="col">Category</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="bill-item">
+                    <td id="bill-name" scope="row"><%= bill.name %></td>
+                    <td id="bill-price" scope="row">$<%= bill.price %></td>
+                    <td id="bill-repeating" scope="row"><%= bill.repeating %></td>
+                    <td id="bill-frequency" scope="row"><%= bill.frequency %></td>
+                    <td id="bill-last-payment" scope="row"><%= bill.lastPayment %></td>
+                    <td id="bill-due-date" scope="row"><%= bill.dueDate %></td>
+                    <td id="paymentURL" scope="row"><%= bill.paymentURL %></td>
+                    <td id="bill-category" scope="row"><%= bill.category %></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div class="row rounded">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Price: </h2>
+            <h2 class="col-6 text-success"><%=bill.price%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Repeating: </h2>
+            <h2 class="col-6 text-success"><%=bill.repeating%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Frequency: </h2>
+            <h2 class="col-6 text-success"><%=bill.frequency%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Last Payment: </h2>
+            <h2 class="col-6 text-success"><%=bill.lastPayment%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Next Due Date: </h2>
+            <h2 class="col-6 text-success"><%=bill.dueDate%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Payment URL: </h2>
+            <h2 class="col-6 text-success"><%=bill.paymentURL%></h2>
+        </div>
+        <div class="row rounded text-center">
+            <div class="col-2"></div>
+            <h2 class="col-3 text-dark">Category: </h2>
+            <h2 class="col-6 text-success"><%=bill.category%></h2>
+        </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a  class="btn btn-info rounded" href="/<%=bill._id%>">Edit</a>
+            <a class="btn btn-danger" href="/">Back</a> -->
+    </div>
+    <div class="text-center mt-4">
+        <a  class="btn btn-info rounded" href="/<%=bill._id%>">Edit</a>
+        <a class="btn btn-danger" href="/">Back</a>
+</body>

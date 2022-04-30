@@ -9,6 +9,11 @@ router.get('/', (req,res)=>{
     })
 });
 
+router.get('/view/:id', (req,res)=>{
+    const id = req.params.id;
+    Bill.findById(id).then((bill)=>{res.render('view', {bill: bill})})
+})
+
 router.post('/add', (req,res)=>{
     Bill.create(req.body).then(res.redirect('/'))
 });

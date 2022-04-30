@@ -11,7 +11,8 @@ const BillSchema = new mongoose.Schema(
         frequency: String,
         lastPayment: Date,
         dueDate: Date,
-        paymentURL: String
+        paymentURL: String,
+        category: String
     }, {timestamps: true}
 );
 
