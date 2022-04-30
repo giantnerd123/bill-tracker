@@ -7,13 +7,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use('/public', express.static('public'));
 
-//changing to connection.js for routes
 const billController = require('./controllers/billController.js');
 app.use(billController);
 
-// app.get('/',(req,res)=>{
-//     res.send('this is working')
-// });
 app.set('view engine', 'ejs');
 const port = process.env.PORT || 4001;
 
