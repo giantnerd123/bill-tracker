@@ -9,7 +9,7 @@
 ## Preview
 ![screenshot](Project-2-Movie.gif "APP")
 
-# Check out the app [Bill Tracker](https://console.developers.google.com/)
+# Check out the app [Bill Tracker](https://skyler-bill-tracker.herokuapp.com/)
 
 
 ## Technologies Used
